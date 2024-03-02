@@ -1,0 +1,19 @@
+[package]
+name = "pijul-interaction"
+description = "Human friendly input/output (progress bars, passwords etc) for contexts such as terminals or GUIs"
+version = "0.0.1"
+authors = ["Finchie"]
+edition = "2021"
+repository = "https://nest.pijul.com/pijul/pijul"
+license = "GPL-2.0"
+include = [ "Cargo.toml", "src" ]
+
+[dependencies]
+dialoguer = { version = "0.10.4", features = ["fuzzy-select"] }
+duplicate = "1.0.0"
+indicatif = { version = "0.17", features = ["improved_unicode"] }
+lazy_static = "1.4"
+log = "0.4.19"
+thiserror = "1.0.43"
+
+pijul-config = { path = "../pijul-config", version = "0.0.1" }

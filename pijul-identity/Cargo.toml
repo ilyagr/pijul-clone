@@ -1,0 +1,33 @@
+[package]
+name = "pijul-identity"
+description = "Functionality to interact with Pijul identities"
+version = "0.0.1"
+authors = ["Finchie"]
+edition = "2021"
+repository = "https://nest.pijul.com/pijul/pijul"
+license = "GPL-2.0"
+include = ["Cargo.toml", "src"]
+
+[features]
+default = ["openssl"]
+openssl = ["thrussh-keys/openssl"]
+
+[dependencies]
+anyhow = { version = "1.0", features = ["backtrace"] }
+chrono = "0.4"
+dateparser = "0.1"
+dirs-next = "2.0"
+keyring = "2.0"
+libpijul = { path = "../libpijul", version = "1.0.0-beta.10" }
+log = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+thrussh-keys = "0.21"
+toml = { version = "0.7", features = ["preserve_order"] }
+validator = { version = "0.15", default-features = false }
+whoami = "1.4"
+
+pijul-config = { path = "../pijul-config", version = "0.0.1" }
+pijul-interaction = { path = "../pijul-interaction", version = "0.0.1" }
+pijul-repository = { path = "../pijul-repository", version = "0.0.1" }
