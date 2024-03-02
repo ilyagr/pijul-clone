@@ -1,0 +1,12 @@
+.DS_Store
+.direnv
+.envrc
+result
+target
+
+
+.jj
+.pijul
+.git
+debug.sanakirja
+debug.tree
