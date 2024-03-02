@@ -1,0 +1,17 @@
+[package]
+name = "pijul-repository"
+description = "Functionality for interacting with a pijul repository"
+version = "0.0.1"
+authors = ["Pierre-Étienne Meunier <pe@pijul.org>"]
+edition = "2021"
+repository = "https://nest.pijul.com/pijul/pijul"
+license = "GPL-2.0"
+include = [ "Cargo.toml", "src" ]
+
+[dependencies]
+anyhow = { version = "1.0", features = ["backtrace"] }
+log = "0.4"
+libpijul = { path = "../libpijul", version = "1.0.0-beta.10" }
+pijul-config = { path = "../pijul-config", version = "0.0.1" }
+rlimit = "0.9"
+toml = { version = "0.7", features = ["preserve_order"] }

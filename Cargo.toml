@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "pijul-macros",
+    "pijul",
+    "libpijul",
+    "pijul-interaction",
+    "pijul-config",
+    "pijul-repository",
+    "pijul-identity",
+    "pijul-remote",
+]
+resolver = "2"
